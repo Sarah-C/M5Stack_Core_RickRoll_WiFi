@@ -1,6 +1,8 @@
 # M5Stack_Core_RickRoll_WiFi
 The raw packet demo of RickRoll - Compiles now for M5Stack - Core Grey.
 
+The existing ESP8266 demo's have C++ cyntax that is incompatible with the Arduino compiler. Therefore I edited it to make the code compatible, and saved it in this .ino Arduino sketch.
+
 Right now the **esp_wifi_80211_tx** function has been patched (**in esp_idf file AppData\Local\Arduino15\packages\esp32\hardware\esp32\1.0.6\tools\sdk\lib\libnet80211.a**) to prevent the transmission of several classes of packets (RickRoll SSID packets still work).           
 That includes the "Deauth" packet that's been used for procuring WiFi passwords. The library now reports "Unsupported frame type: 0x0C."
 
