@@ -1,7 +1,7 @@
 # M5Stack_Core_RickRoll_WiFi
 The raw packet demo of RickRoll - Compiles now for M5Stack - Core Grey.
 
-Right now the **esp_wifi_80211_tx** function has been patched to prevent the transmission of several classes of packets (RickRoll SSID packets still work).           
+Right now the **esp_wifi_80211_tx** function has been patched (in esp_idf file libnet80211.a) to prevent the transmission of several classes of packets (RickRoll SSID packets still work).           
 That includes the "Deauth" packet that's been used for procuring WiFi passwords. The library now reports "Unsupported frame type: 0x0C."
 
 Earlier versions of the library function were easily patched by removing the type checks, but more recent (July 2021+) builds have obscured the assembly making it much harder to patch. As a result - there's no current library patch that re-enables the freedom of esp_wifi_80211_tx().
