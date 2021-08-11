@@ -6,7 +6,7 @@ That includes the "Deauth" packet that's been used for procuring WiFi passwords.
 
 Earlier versions of the library function were easily patched by removing the type checks, but more recent (July 2021+) builds have obscured the assembly making it much harder to patch. As a result - there's no current library patch that re-enables the freedom of esp_wifi_80211_tx().
 
-Just compile and upload this sketch. Whenever the Core is turned on it produces several fake SSID's (WiFi access points) that produce the song lyrics:
+Just compile and upload this sketch. Whenever the Core is turned on it produces several fake SSID's (WiFi access points) on any WiFi receivers in range, that produces the following song lyrics:
 ```cpp
 const char *rick_ssids[] = {        
   "01 Never gonna give you up",          
